@@ -1,0 +1,490 @@
+
+> web222-assignment-2@7.0.0 test
+> jest --
+
+PASS src/problem-04.test.js
+FAIL src/problem-05.test.js
+  ● Problem 05 - getObservationsByLocation() function › lat and lng values return an Array of expected results
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 0
+
+    [0m [90m  6 |[39m   [36mfunction[39m expectSuitableArray(value[33m,[39m expectedLength) {
+     [90m  7 |[39m     expect([33mArray[39m[33m.[39misArray(value))[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m  8 |[39m     expect(value[33m.[39mlength)[33m.[39mtoBe(expectedLength)[33m;[39m
+     [90m    |[39m                          [31m[1m^[22m[39m
+     [90m  9 |[39m   }
+     [90m 10 |[39m
+     [90m 11 |[39m   test([32m'missing options object returns same Array as original'[39m[33m,[39m [36mfunction[39m () {[0m
+
+      at toBe (src/problem-05.test.js:8:26)
+      at Object.expectSuitableArray (src/problem-05.test.js:23:5)
+
+  ● Problem 05 - getObservationsByLocation() function › min and max values return an Array of expected results
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 10
+    Received: 0
+
+    [0m [90m  6 |[39m   [36mfunction[39m expectSuitableArray(value[33m,[39m expectedLength) {
+     [90m  7 |[39m     expect([33mArray[39m[33m.[39misArray(value))[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m  8 |[39m     expect(value[33m.[39mlength)[33m.[39mtoBe(expectedLength)[33m;[39m
+     [90m    |[39m                          [31m[1m^[22m[39m
+     [90m  9 |[39m   }
+     [90m 10 |[39m
+     [90m 11 |[39m   test([32m'missing options object returns same Array as original'[39m[33m,[39m [36mfunction[39m () {[0m
+
+      at toBe (src/problem-05.test.js:8:26)
+      at Object.expectSuitableArray (src/problem-05.test.js:39:5)
+
+PASS src/problem-06.test.js
+PASS src/problem-07.test.js
+PASS src/problem-08.test.js
+FAIL src/problem-01.test.js
+  ● Problem 01 Part 1 - speciesCoordinates() function with for loop › speciesCoordinates() should log correct format of all cases
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringMatching /^"[^"]+" observed at coordinates \(-?\d+(\.\d+)?,-?\d+(\.\d+)?\)$/i
+    Received: "Muskrat observed at coordinates (4,3)"
+
+    [0m [90m 31 |[39m     expect(consoleOutput[33m.[39mlength)[33m.[39mtoBe(results[33m.[39mlength)[33m;[39m
+     [90m 32 |[39m     consoleOutput[33m.[39mforEach((output) [33m=>[39m
+    [31m[1m>[22m[39m[90m 33 |[39m       expect(output)[33m.[39mtoEqual(
+     [90m    |[39m                      [31m[1m^[22m[39m
+     [90m 34 |[39m         [90m// We expect a string like '"Muskrat" observed at coordinates (43.79248394, -79.33852796)"'[39m
+     [90m 35 |[39m         expect[33m.[39mstringMatching(regex)
+     [90m 36 |[39m       )[0m
+
+      at toEqual (src/problem-01.test.js:33:22)
+          at Array.forEach (<anonymous>)
+      at Object.forEach (src/problem-01.test.js:32:19)
+
+  ● Problem 01 Part 2 - speciesCoordinates2() function with .forEach() › speciesCoordinates2() should log correct format of all cases
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringMatching /^"[^"]+" observed at coordinates \(-?\d+(\.\d+)?,-?\d+(\.\d+)?\)$/i
+    Received: "Muskrat observed at coordinates (4,3)"
+
+    [0m [90m 31 |[39m     expect(consoleOutput[33m.[39mlength)[33m.[39mtoBe(results[33m.[39mlength)[33m;[39m
+     [90m 32 |[39m     consoleOutput[33m.[39mforEach((output) [33m=>[39m
+    [31m[1m>[22m[39m[90m 33 |[39m       expect(output)[33m.[39mtoEqual(
+     [90m    |[39m                      [31m[1m^[22m[39m
+     [90m 34 |[39m         [90m// We expect a string like '"Muskrat" observed at coordinates (43.79248394, -79.33852796)"'[39m
+     [90m 35 |[39m         expect[33m.[39mstringMatching(regex)
+     [90m 36 |[39m       )[0m
+
+      at toEqual (src/problem-01.test.js:33:22)
+          at Array.forEach (<anonymous>)
+      at Object.forEach (src/problem-01.test.js:32:19)
+
+  ● Problem 01 Part 3 - speciesCoordinates3() function with for-of › speciesCoordinates3() should log correct format of all cases
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringMatching /^"[^"]+" observed at coordinates \(-?\d+(\.\d+)?, -?\d+(\.\d+)?\)$/i
+    Received: "Muskrat observed at coordinates (4, 3)"
+
+    [0m [90m 31 |[39m     expect(consoleOutput[33m.[39mlength)[33m.[39mtoBe(results[33m.[39mlength)[33m;[39m
+     [90m 32 |[39m     consoleOutput[33m.[39mforEach((output) [33m=>[39m
+    [31m[1m>[22m[39m[90m 33 |[39m       expect(output)[33m.[39mtoEqual(
+     [90m    |[39m                      [31m[1m^[22m[39m
+     [90m 34 |[39m         [90m// We expect a string like '"Muskrat" observed at coordinates (43.79248394, -79.33852796)"'[39m
+     [90m 35 |[39m         expect[33m.[39mstringMatching(regex)
+     [90m 36 |[39m       )[0m
+
+      at toEqual (src/problem-01.test.js:33:22)
+          at Array.forEach (<anonymous>)
+      at Object.forEach (src/problem-01.test.js:32:19)
+
+PASS src/problem-02.test.js
+FAIL src/problem-03.test.js
+  ● Problem 03 - transformObservation(), transformObservations(), transformObservations2() functions › Problem 03 - transformObservation() function › should return an Object containing an isExtinct property
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: undefined
+
+    [0m [90m 49 |[39m
+     [90m 50 |[39m       [36mdelete[39m sample[33m.[39mconservation_status[33m;[39m
+    [31m[1m>[22m[39m[90m 51 |[39m       expect(transformObservation(sample)[33m.[39misExtinct)[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 52 |[39m     })[33m;[39m
+     [90m 53 |[39m
+     [90m 54 |[39m     test([32m'should return an Object containing an observer property'[39m[33m,[39m [36mfunction[39m () {[0m
+
+      at Object.toBe (src/problem-03.test.js:51:54)
+
+  ● Problem 03 - transformObservation(), transformObservations(), transformObservations2() functions › transformObservations() function › should return an Object containing an isExtinct property
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: undefined
+
+    [0m [90m 127 |[39m     test([32m'should return an Object containing an isExtinct property'[39m[33m,[39m [36mfunction[39m () {
+     [90m 128 |[39m       [36mlet[39m result [33m=[39m transformObservations(sampleData)[33m;[39m
+    [31m[1m>[22m[39m[90m 129 |[39m       expect(result[[35m0[39m][33m.[39misExtinct)[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m     |[39m                                   [31m[1m^[22m[39m
+     [90m 130 |[39m       expect(result[[35m1[39m][33m.[39misExtinct)[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m 131 |[39m     })[33m;[39m
+     [90m 132 |[39m[0m
+
+      at Object.toBe (src/problem-03.test.js:129:35)
+
+  ● Problem 03 - transformObservation(), transformObservations(), transformObservations2() functions › transformObservations() function › real-world data should behave the same way as test data
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 10
+    + Received  + 10
+
+    @@ -5,11 +5,11 @@
+            Object {
+              "copyright": "(c) dridgen, some rights reserved (CC BY-NC)",
+              "url": "https://static.inaturalist.org/photos/109762131/square.jpg?1610308133",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "muskrat",
+          "observer": "dridgen@inaturalist.com",
+        },
+        Object {
+          "id": 66528178,
+    @@ -17,11 +17,11 @@
+            Object {
+              "copyright": "(c) Mohammed Master, all rights reserved",
+              "url": "https://static.inaturalist.org/photos/107267018/square.jpeg?1607882195",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "cordia sebestena sebestena",
+          "observer": "mohammedmaster@inaturalist.com",
+        },
+        Object {
+          "id": 61770700,
+    @@ -29,11 +29,11 @@
+            Object {
+              "copyright": "(c) johnnyrehabb, some rights reserved (CC BY-NC)",
+              "url": "https://static.inaturalist.org/photos/98884441/square.jpg?1601901356",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "common eastern bumble bee",
+          "observer": "johnnyrehabb@inaturalist.com",
+        },
+        Object {
+          "id": 61472666,
+    @@ -41,11 +41,11 @@
+            Object {
+              "copyright": "(c) Monica Yeung, all rights reserved",
+              "url": "https://static.inaturalist.org/photos/98374594/square.jpeg?1601643792",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "angel's trumpet",
+          "observer": "monicayeung@inaturalist.com",
+        },
+        Object {
+          "id": 61307088,
+    @@ -61,11 +61,11 @@
+            Object {
+              "copyright": "(c) Holly, some rights reserved (CC BY-NC)",
+              "url": "https://static.inaturalist.org/photos/98097088/square.jpeg?1601483871",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "dryobates woodpeckers",
+          "observer": "h-easton@inaturalist.com",
+        },
+        Object {
+          "id": 60706122,
+    @@ -73,11 +73,11 @@
+            Object {
+              "copyright": "(c) Monica Yeung, all rights reserved",
+              "url": "https://static.inaturalist.org/photos/97090180/square.jpeg?1601038974",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "american trumpet vine",
+          "observer": "monicayeung@inaturalist.com",
+        },
+        Object {
+          "id": 60671346,
+    @@ -85,11 +85,11 @@
+            Object {
+              "copyright": "(c) Karen C, all rights reserved",
+              "url": "https://static.inaturalist.org/photos/97031452/square.jpeg?1600996784",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "bittersweet nightshade",
+          "observer": "kareberry@inaturalist.com",
+        },
+        Object {
+          "id": 60021049,
+    @@ -101,11 +101,11 @@
+            Object {
+              "copyright": "(c) xinjie lin, all rights reserved",
+              "url": "https://static.inaturalist.org/photos/95944271/square.jpeg?1600471210",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "香茶屬",
+          "observer": "xinjielin@inaturalist.com",
+        },
+        Object {
+          "id": 60020978,
+    @@ -113,11 +113,11 @@
+            Object {
+              "copyright": "(c) xinjie lin, all rights reserved",
+              "url": "https://static.inaturalist.org/photos/95944070/square.jpeg?1600471140",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "矮牽牛屬",
+          "observer": "xinjielin@inaturalist.com",
+        },
+        Object {
+          "id": 60004808,
+    @@ -129,10 +129,10 @@
+            Object {
+              "copyright": "(c) xinjie lin, all rights reserved",
+              "url": "https://static.inaturalist.org/photos/95916500/square.jpeg?1600460656",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "芹亞科",
+          "observer": "xinjielin@inaturalist.com",
+        },
+      ]
+
+    [0m [90m 153 |[39m
+     [90m 154 |[39m     test([32m'real-world data should behave the same way as test data'[39m[33m,[39m [36mfunction[39m () {
+    [31m[1m>[22m[39m[90m 155 |[39m       expect(transformObservations(data))[33m.[39mtoEqual([
+     [90m     |[39m                                           [31m[1m^[22m[39m
+     [90m 156 |[39m         {
+     [90m 157 |[39m           id[33m:[39m [35m67868131[39m[33m,[39m
+     [90m 158 |[39m           name[33m:[39m [32m'muskrat'[39m[33m,[39m[0m
+
+      at Object.toEqual (src/problem-03.test.js:155:43)
+
+  ● Problem 03 - transformObservation(), transformObservations(), transformObservations2() functions › transformObservations2() function › should return an Object containing an isExtinct property
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: undefined
+
+    [0m [90m 337 |[39m     test([32m'should return an Object containing an isExtinct property'[39m[33m,[39m [36mfunction[39m () {
+     [90m 338 |[39m       [36mlet[39m result [33m=[39m transformObservations2(sampleData)[33m;[39m
+    [31m[1m>[22m[39m[90m 339 |[39m       expect(result[[35m0[39m][33m.[39misExtinct)[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m     |[39m                                   [31m[1m^[22m[39m
+     [90m 340 |[39m       expect(result[[35m1[39m][33m.[39misExtinct)[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m 341 |[39m     })[33m;[39m
+     [90m 342 |[39m[0m
+
+      at Object.toBe (src/problem-03.test.js:339:35)
+
+  ● Problem 03 - transformObservation(), transformObservations(), transformObservations2() functions › transformObservations2() function › real-world data should behave the same way as test data
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 10
+    + Received  + 10
+
+    @@ -5,11 +5,11 @@
+            Object {
+              "copyright": "(c) dridgen, some rights reserved (CC BY-NC)",
+              "url": "https://static.inaturalist.org/photos/109762131/square.jpg?1610308133",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "muskrat",
+          "observer": "dridgen@inaturalist.com",
+        },
+        Object {
+          "id": 66528178,
+    @@ -17,11 +17,11 @@
+            Object {
+              "copyright": "(c) Mohammed Master, all rights reserved",
+              "url": "https://static.inaturalist.org/photos/107267018/square.jpeg?1607882195",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "cordia sebestena sebestena",
+          "observer": "mohammedmaster@inaturalist.com",
+        },
+        Object {
+          "id": 61770700,
+    @@ -29,11 +29,11 @@
+            Object {
+              "copyright": "(c) johnnyrehabb, some rights reserved (CC BY-NC)",
+              "url": "https://static.inaturalist.org/photos/98884441/square.jpg?1601901356",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "common eastern bumble bee",
+          "observer": "johnnyrehabb@inaturalist.com",
+        },
+        Object {
+          "id": 61472666,
+    @@ -41,11 +41,11 @@
+            Object {
+              "copyright": "(c) Monica Yeung, all rights reserved",
+              "url": "https://static.inaturalist.org/photos/98374594/square.jpeg?1601643792",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "angel's trumpet",
+          "observer": "monicayeung@inaturalist.com",
+        },
+        Object {
+          "id": 61307088,
+    @@ -61,11 +61,11 @@
+            Object {
+              "copyright": "(c) Holly, some rights reserved (CC BY-NC)",
+              "url": "https://static.inaturalist.org/photos/98097088/square.jpeg?1601483871",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "dryobates woodpeckers",
+          "observer": "h-easton@inaturalist.com",
+        },
+        Object {
+          "id": 60706122,
+    @@ -73,11 +73,11 @@
+            Object {
+              "copyright": "(c) Monica Yeung, all rights reserved",
+              "url": "https://static.inaturalist.org/photos/97090180/square.jpeg?1601038974",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "american trumpet vine",
+          "observer": "monicayeung@inaturalist.com",
+        },
+        Object {
+          "id": 60671346,
+    @@ -85,11 +85,11 @@
+            Object {
+              "copyright": "(c) Karen C, all rights reserved",
+              "url": "https://static.inaturalist.org/photos/97031452/square.jpeg?1600996784",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "bittersweet nightshade",
+          "observer": "kareberry@inaturalist.com",
+        },
+        Object {
+          "id": 60021049,
+    @@ -101,11 +101,11 @@
+            Object {
+              "copyright": "(c) xinjie lin, all rights reserved",
+              "url": "https://static.inaturalist.org/photos/95944271/square.jpeg?1600471210",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "香茶屬",
+          "observer": "xinjielin@inaturalist.com",
+        },
+        Object {
+          "id": 60020978,
+    @@ -113,11 +113,11 @@
+            Object {
+              "copyright": "(c) xinjie lin, all rights reserved",
+              "url": "https://static.inaturalist.org/photos/95944070/square.jpeg?1600471140",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "矮牽牛屬",
+          "observer": "xinjielin@inaturalist.com",
+        },
+        Object {
+          "id": 60004808,
+    @@ -129,10 +129,10 @@
+            Object {
+              "copyright": "(c) xinjie lin, all rights reserved",
+              "url": "https://static.inaturalist.org/photos/95916500/square.jpeg?1600460656",
+            },
+          ],
+    -     "isExtinct": false,
+    +     "isExtinct": undefined,
+          "name": "芹亞科",
+          "observer": "xinjielin@inaturalist.com",
+        },
+      ]
+
+    [0m [90m 363 |[39m
+     [90m 364 |[39m     test([32m'real-world data should behave the same way as test data'[39m[33m,[39m [36mfunction[39m () {
+    [31m[1m>[22m[39m[90m 365 |[39m       expect(transformObservations2(data))[33m.[39mtoEqual([
+     [90m     |[39m                                            [31m[1m^[22m[39m
+     [90m 366 |[39m         {
+     [90m 367 |[39m           id[33m:[39m [35m67868131[39m[33m,[39m
+     [90m 368 |[39m           name[33m:[39m [32m'muskrat'[39m[33m,[39m[0m
+
+      at Object.toEqual (src/problem-03.test.js:365:44)
+
+FAIL src/problem-00.test.js
+  ● Problem 00 - getTotalResults() function › getTotalResults() should return a Number
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "number"
+    Received: "object"
+
+    [0m [90m  8 |[39m [90m     */[39m
+     [90m  9 |[39m     [36mconst[39m totalResults [33m=[39m getTotalResults(data)[33m;[39m
+    [31m[1m>[22m[39m[90m 10 |[39m     expect([36mtypeof[39m totalResults)[33m.[39mtoBe([32m'number'[39m)[33m;[39m
+     [90m    |[39m                                 [31m[1m^[22m[39m
+     [90m 11 |[39m   })[33m;[39m
+     [90m 12 |[39m
+     [90m 13 |[39m   test([32m'getTotalResults() should contain the correct number of items'[39m[33m,[39m [36mfunction[39m () {[0m
+
+      at Object.toBe (src/problem-00.test.js:10:33)
+
+  ● Problem 00 - getTotalResults() function › getTotalResults() should contain the correct number of items
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 125
+    Received: [[Object], [Object], [Object], [Object], [Object], [Object], [Object], [Object], [Object], [Object]]
+
+    [0m [90m 16 |[39m [90m     */[39m
+     [90m 17 |[39m     [36mconst[39m totalResults [33m=[39m getTotalResults(data)[33m;[39m
+    [31m[1m>[22m[39m[90m 18 |[39m     expect(totalResults)[33m.[39mtoBe([35m125[39m)[33m;[39m
+     [90m    |[39m                          [31m[1m^[22m[39m
+     [90m 19 |[39m   })[33m;[39m
+     [90m 20 |[39m })[33m;[39m
+     [90m 21 |[39m[0m
+
+      at Object.toBe (src/problem-00.test.js:18:26)
+
+Test Suites: 4 failed, 5 passed, 9 total
+Tests:       12 failed, 59 passed, 71 total
+Snapshots:   0 total
+Time:        2.106 s, estimated 3 s
+Ran all test suites.

@@ -1,0 +1,159 @@
+
+> web222-assignment-1@6.0.0 test
+> jest --
+
+jest-haste-map: Haste module naming collision: web222-assignment-1
+  The following files share their name; please adjust your hasteImpl:
+    * <rootDir>\package.json
+    * <rootDir>\submission\package.json
+
+PASS src/problem-01.test.js
+PASS src/problem-00.test.js
+PASS src/problem-05.test.js
+FAIL src/problem-02.test.js
+  ● Problem 2 - createLinkTag() function › correct <link> tag for stylesheet link, stripping double-quotes where appropriate
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "<link rel=stylesheet href=\"styles.css\">"
+    Received: "<link rel=stylesheet href=styles.css>"
+
+    [0m [90m  6 |[39m     [36mlet[39m href [33m=[39m [32m'styles.css'[39m[33m;[39m
+     [90m  7 |[39m     [36mlet[39m result [33m=[39m createLinkTag(rel[33m,[39m href)[33m;[39m
+    [31m[1m>[22m[39m[90m  8 |[39m     expect(result)[33m.[39mtoBe([32m'<link rel=stylesheet href="styles.css">'[39m)[33m;[39m
+     [90m    |[39m                    [31m[1m^[22m[39m
+     [90m  9 |[39m   })[33m;[39m
+     [90m 10 |[39m
+     [90m 11 |[39m   test([32m'leading whitespace is removed before using values'[39m[33m,[39m [36mfunction[39m () {[0m
+
+      at Object.toBe (src/problem-02.test.js:8:20)
+
+PASS src/problem-08.test.js
+FAIL src/problem-07.test.js
+  ● Problem 7 - mimeTypeFromFilename() function › correct MIME type for TXT extension
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: "text//plain"
+    Received: "text/plain"
+
+    [0m [90m 3 |[39m describe([32m'Problem 7 - mimeTypeFromFilename() function'[39m[33m,[39m [36mfunction[39m () {
+     [90m 4 |[39m   test([32m'correct MIME type for TXT extension'[39m[33m,[39m [36mfunction[39m () {
+    [31m[1m>[22m[39m[90m 5 |[39m     expect(mimeTypeFromFilename([32m'doc.txt'[39m))[33m.[39mtoEqual([32m'text//plain'[39m)[33m;[39m
+     [90m   |[39m                                             [31m[1m^[22m[39m
+     [90m 6 |[39m   })[33m;[39m
+     [90m 7 |[39m
+     [90m 8 |[39m   test([32m'correct MIME type for HTML extensions'[39m[33m,[39m [36mfunction[39m () {[0m
+
+      at Object.toEqual (src/problem-07.test.js:5:45)
+
+  ● Problem 7 - mimeTypeFromFilename() function › correct MIME type for HTML extensions
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: "text//html"
+    Received: "text/html"
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m   test([32m'correct MIME type for HTML extensions'[39m[33m,[39m [36mfunction[39m () {
+    [31m[1m>[22m[39m[90m  9 |[39m     expect(mimeTypeFromFilename([32m'index.html'[39m))[33m.[39mtoEqual([32m'text//html'[39m)[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 10 |[39m     expect(mimeTypeFromFilename([32m'index.htm'[39m))[33m.[39mtoEqual([32m'text//html'[39m)[33m;[39m
+     [90m 11 |[39m   })[33m;[39m
+     [90m 12 |[39m[0m
+
+      at Object.toEqual (src/problem-07.test.js:9:48)
+
+PASS src/problem-04.test.js
+PASS src/problem-03.test.js
+FAIL src/problem-06.test.js
+  ● Problem 6 - formatTimes() › a single time is valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "[(16, 26, 24)]"
+    Received: undefined
+
+    [0m [90m 4 |[39m   test([32m'a single time is valid'[39m[33m,[39m [36mfunction[39m () {
+     [90m 5 |[39m     [36mlet[39m result [33m=[39m formatTimes([32m'4:26:24 PM'[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 6 |[39m     expect(result)[33m.[39mtoBe([32m'[(16, 26, 24)]'[39m)[33m;[39m
+     [90m   |[39m                    [31m[1m^[22m[39m
+     [90m 7 |[39m   })[33m;[39m
+     [90m 8 |[39m
+     [90m 9 |[39m   test([32m'valid times of the form h:m:s should be formatted correctly in a list'[39m[33m,[39m [36mfunction[39m () {[0m
+
+      at Object.toBe (src/problem-06.test.js:6:20)
+
+  ● Problem 6 - formatTimes() › valid times of the form h:m:s should be formatted correctly in a list
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "[(1, 16, 24), (1, 16, 25), (1, 16, 26)]"
+    Received: undefined
+
+    [0m [90m  9 |[39m   test([32m'valid times of the form h:m:s should be formatted correctly in a list'[39m[33m,[39m [36mfunction[39m () {
+     [90m 10 |[39m     [36mlet[39m result [33m=[39m formatTimes([32m'1:16:24'[39m[33m,[39m [32m'1:16:25'[39m[33m,[39m [32m'1:16:26'[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 11 |[39m     expect(result)[33m.[39mtoBe([32m'[(1, 16, 24), (1, 16, 25), (1, 16, 26)]'[39m)[33m;[39m
+     [90m    |[39m                    [31m[1m^[22m[39m
+     [90m 12 |[39m   })[33m;[39m
+     [90m 13 |[39m
+     [90m 14 |[39m   test([32m'valid times of the form h:m:s AM/PM should be formatted correctly in a list'[39m[33m,[39m [36mfunction[39m () {[0m
+
+      at Object.toBe (src/problem-06.test.js:11:20)
+
+  ● Problem 6 - formatTimes() › valid times of the form h:m:s AM/PM should be formatted correctly in a list
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "[(16, 16, 24), (4, 16, 25)]"
+    Received: undefined
+
+    [0m [90m 14 |[39m   test([32m'valid times of the form h:m:s AM/PM should be formatted correctly in a list'[39m[33m,[39m [36mfunction[39m () {
+     [90m 15 |[39m     [36mlet[39m result [33m=[39m formatTimes([32m'4:16:24 PM'[39m[33m,[39m [32m'4:16:25 AM'[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 16 |[39m     expect(result)[33m.[39mtoBe([32m'[(16, 16, 24), (4, 16, 25)]'[39m)[33m;[39m
+     [90m    |[39m                    [31m[1m^[22m[39m
+     [90m 17 |[39m   })[33m;[39m
+     [90m 18 |[39m
+     [90m 19 |[39m   test([32m'invalid times are skipped'[39m[33m,[39m [36mfunction[39m () {[0m
+
+      at Object.toBe (src/problem-06.test.js:16:20)
+
+  ● Problem 6 - formatTimes() › invalid times are skipped
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "[(4, 16, 24), (4, 16, 25)]"
+    Received: undefined
+
+    [0m [90m 19 |[39m   test([32m'invalid times are skipped'[39m[33m,[39m [36mfunction[39m () {
+     [90m 20 |[39m     [36mlet[39m result [33m=[39m formatTimes([32m'4:16:24'[39m[33m,[39m [32m'60:60:60'[39m[33m,[39m [32m'100:100:100'[39m[33m,[39m [32m'4:16:25 AM'[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     expect(result)[33m.[39mtoBe([32m'[(4, 16, 24), (4, 16, 25)]'[39m)[33m;[39m
+     [90m    |[39m                    [31m[1m^[22m[39m
+     [90m 22 |[39m   })[33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m   test([32m'if all values are invalid, an empty list is returned'[39m[33m,[39m [36mfunction[39m () {[0m
+
+      at Object.toBe (src/problem-06.test.js:21:20)
+
+  ● Problem 6 - formatTimes() › if all values are invalid, an empty list is returned
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "[]"
+    Received: undefined
+
+    [0m [90m 24 |[39m   test([32m'if all values are invalid, an empty list is returned'[39m[33m,[39m [36mfunction[39m () {
+     [90m 25 |[39m     [36mlet[39m result [33m=[39m formatTimes([32m'60:60:60'[39m[33m,[39m [32m'100:100:100'[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 26 |[39m     expect(result)[33m.[39mtoBe([32m'[]'[39m)[33m;[39m
+     [90m    |[39m                    [31m[1m^[22m[39m
+     [90m 27 |[39m   })[33m;[39m
+     [90m 28 |[39m })[33m;[39m
+     [90m 29 |[39m[0m
+
+      at Object.toBe (src/problem-06.test.js:26:20)
+
+Test Suites: 3 failed, 6 passed, 9 total
+Tests:       8 failed, 57 passed, 65 total
+Snapshots:   0 total
+Time:        1.434 s, estimated 4 s
+Ran all test suites.
